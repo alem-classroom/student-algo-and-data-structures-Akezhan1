@@ -1,4 +1,10 @@
 def binary_search(lst, to_find):
-    # search for the element to_find inside lst
-    # if found, return index of element
-    # else return -1
+    if to_find in lst:
+        mid = len(lst)//2
+        while lst[mid] != to_find:
+            if lst[mid] > to_find:
+                mid = len(lst[:mid])//2
+            else: 
+                mid = (len(lst[mid:])//2)+len(lst[:mid])
+        return mid
+    return -1
