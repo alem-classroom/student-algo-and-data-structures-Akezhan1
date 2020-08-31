@@ -3,6 +3,6 @@ def linear_search(lst, to_find):
     i = 0
     while i < len(lst):
       if lst[i] == to_find:
-        return i
+        return lst[i]
       i += 1
   return -1
